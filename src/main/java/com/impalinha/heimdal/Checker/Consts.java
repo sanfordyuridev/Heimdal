@@ -13,10 +13,11 @@ public abstract class Consts {
     public static ModEntity ARMOURERS_WORKSHOP = new ModEntity("Armourers-Workshop-1.12.2-0.50.5.jar", "2625996");
     public static ModEntity CUSTOM_NPC = new ModEntity("CustomNPCs_1.12.2-(05Jul20).jar", "9911871");
     public static ModEntity SUPER_IC = new ModEntity("superic-1.0.jar", "369117");
+    public static ModEntity VOICE_CHAT = new ModEntity("voicechat-forge-1.12.2-2.3.27.jar", "8816350");
     public static String HEIMDAL = "heimdal-1.0.jar";
     public static String LINK = "https://www.dropbox.com/scl/fi/o7jmer2zo1jfwvjfuc405/MODPACKSUPER.zip?rlkey=ls7saov6x8pyebekp68c7g2vx&dl=1";
-    public static String LINK_BAT = "https://www.dropbox.com/scl/fi/527bhm2bnqkgzafjswv6x/UpdateMods.bat?rlkey=l9szdfin8tpl324c08lhja1wv&dl=1";
-    public static ModEntity[] CURRENT_MODS = {DAMAGE_INDICATOR, ARMOURERS_WORKSHOP, CUSTOM_NPC, SUPER_IC};
+    public static String LINK_BAT = "https://www.dropbox.com/scl/fi/681tdpj7imik59ruj0ozw/CheckIntegrity.bat?rlkey=q8zgl7fvfg8uzvwfxfo7rapay&dl=1";
+    public static ModEntity[] CURRENT_MODS = {DAMAGE_INDICATOR, ARMOURERS_WORKSHOP, CUSTOM_NPC, SUPER_IC, VOICE_CHAT};
     public static String[] VERIFY_CLIENT_TXT = {
             "Sugerimos que verifique a integridade dos seus arquivos",
             "Caso tenha algum arquivo suspeito, remova-o e tente novamente",

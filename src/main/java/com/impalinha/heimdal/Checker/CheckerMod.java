@@ -1,7 +1,6 @@
 package com.impalinha.heimdal.Checker;
 
 import com.impalinha.heimdal.Pref.ModEntity;
-import com.impalinha.heimdal.Pref.Pref;
 
 import java.io.File;
 

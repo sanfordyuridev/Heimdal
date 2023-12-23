@@ -3,11 +3,8 @@ package com.impalinha.heimdal.RestoreMod;
 import com.impalinha.heimdal.Checker.Consts;
 import com.impalinha.heimdal.Pref.Pref;
 import net.minecraft.client.Minecraft;
-import net.minecraftforge.fml.common.network.handshake.FMLHandshakeMessage;
-import net.minecraftforge.fml.relauncher.libraries.ModList;
 import org.apache.commons.io.FileUtils;
-import org.lwjgl.Sys;
-
+import java.awt.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -28,24 +25,17 @@ public abstract class RestoreMod {
 
         extractZip(file.getPath(), mcDir);
 
-        File fileBat = new File(mcDir, "UpdateMods.bat");
+        File fileBat = new File(mcDir, "CheckIntegrity.bat");
         FileUtils.copyURLToFile(new URL(Consts.LINK_BAT), fileBat);
 
-        ProcessBuilder processBuilder = new ProcessBuilder("cmd.exe", "/c", "start", "cmd.exe", "/c", "UpdateMods.bat");
-        processBuilder.directory(new File(mcDir));
-
-        processBuilder.inheritIO();
-
-        processBuilder.start();
-
         try {
+            Desktop.getDesktop().open(fileBat);
             Thread.sleep(3000);
             Minecraft.getMinecraft().shutdown();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
-
 
     public static void extractZip(String caminhoArquivoZip, String diretorioDestino) throws IOException {
         try (ZipInputStream zipInputStream = new ZipInputStream(new FileInputStream(caminhoArquivoZip))) {
